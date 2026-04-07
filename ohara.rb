@@ -5,21 +5,21 @@
 class Ohara < Formula
   desc "CLI for Ohara — agent-optimized documentation"
   homepage "https://ohara.dev"
-  version "0.26.5"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Lackech/ohara/releases/download/v0.26.5/ohara_0.26.5_darwin_amd64.tar.gz"
-      sha256 "3b11603f500b35fcaaaf67cc5698b87eac0d3d87dce2ae1731b8c5dfbf08b764"
+      url "https://github.com/Lackech/ohara/releases/download/v1.0.0/ohara_1.0.0_darwin_amd64.tar.gz"
+      sha256 "f48f154c39075a92dd7f073862d74191405492b5fd1937286776e678a9073174"
 
       define_method(:install) do
         bin.install "ohara"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Lackech/ohara/releases/download/v0.26.5/ohara_0.26.5_darwin_arm64.tar.gz"
-      sha256 "d4bf314eee4c472b373fed8172636ff86914fdcbf7e494563236d1b4b2d75c90"
+      url "https://github.com/Lackech/ohara/releases/download/v1.0.0/ohara_1.0.0_darwin_arm64.tar.gz"
+      sha256 "e75475ba7cea18d30881bb3b71c13df340ba77a1a10d734c6488e12656f404f9"
 
       define_method(:install) do
         bin.install "ohara"
@@ -29,15 +29,15 @@ class Ohara < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lackech/ohara/releases/download/v0.26.5/ohara_0.26.5_linux_amd64.tar.gz"
-      sha256 "fca4ad1ba379ceb230d3558a8456115644049643cd2d23155d04ab2ce8731cb5"
+      url "https://github.com/Lackech/ohara/releases/download/v1.0.0/ohara_1.0.0_linux_amd64.tar.gz"
+      sha256 "bbd74118fb2c0f104c51dd096f8fa179dc9d664fe768d7d75382de4c8a8a712d"
       define_method(:install) do
         bin.install "ohara"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lackech/ohara/releases/download/v0.26.5/ohara_0.26.5_linux_arm64.tar.gz"
-      sha256 "9a74de07ba026954e1b200d40d25622f352920cb512145711c1b17e2d664143f"
+      url "https://github.com/Lackech/ohara/releases/download/v1.0.0/ohara_1.0.0_linux_arm64.tar.gz"
+      sha256 "7622ad688a6165e0bd0f428d55227c2bbf16308685816418bb8472bc9bce5729"
       define_method(:install) do
         bin.install "ohara"
       end
